@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+/* VARIABLES */ 
+/* COLOR */
+:root{
+    --FCOLOR: greenyellow;
+}
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  figcaption {
+    margin-left: 10px;
+  }
+  
+  .logo h3 {
+    margin: 0;
+    
+    font-family:  'Heebo', sans-serif;}
+  
+  nav {
+    margin-left: 20px;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-left: 3rem;
+    margin-right: 5rem ;
+  }
+
+
+  .links a {
+    background-image: linear-gradient(
+      to right,
+      var(--FCOLOR),
+      var(--FCOLOR) 50%,
+      #000 50%
+    );
+     background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    font-family: 'Heebo', sans-serif;
+   
+  }
+  .links a:before{
+    content: '';
+    background: var(--FCOLOR);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  
+  .links a:hover {
+   background-position: 0;
+  }
+  
+  .links a:hover::before{
+    width: 100%;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+figure{
+    display: flex;
+    align-items: center;
+}  
+.box{
+    inline-size: 300px;
+    font-size: 2rem;
+    padding-left: 7rem;
+}
+.box p{
+  inline-size: 400px;
+  font-size: 1rem;
+}
+.box a{
+text-decoration: none;
+color: black;
+font-weight: bold;
+}
+.doc a{
+  margin-left: 100px;
+  background-color: var(--FCOLOR);
+  display: inline;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: var(--FCOLOR);
+  padding: 0.5rem;
+}
+.doc{
+  margin-top: 2rem;
+}
+.doc a:hover{
+background-color: black;
+color: aliceblue;
+
+}
+
+main h3{
+    color: var(--FCOLOR);
+    padding-left: 7rem;
+    font-family: 'Noto Serif Hebrew', serif;
+   /*  border: 2px solid var(--FCOLOR);
+    display: inline-block;
+   align-content: center; */
+}
+.anim a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: bolder;
+    color: black;
+  }
+  .anim a:visited{
+    color: black;
+  }
+  
+  .anim a::before,
+  .anim a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+ .anim a::before {
+    background-color: var(--FCOLOR);
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  .anim a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: var(--FCOLOR);
+  }
+  
+  .anim a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  .anim a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+ .anim a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  .anim a:hover span {
+    transform: translate3d(-200%, 0, 0);
+   
+    
+    
+    nav {
+        background-color: var(--FCOLOR);
+        display: none;
+        transform-origin: center;
+        animation: showMenu 0.5s ease-in-out forwards;
+    }
+    
+    
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    nav li {
+        padding: 0.5rem;
+        border-top: 1px solid var(--FCOLOR);
+    }
+    
+    nav a {
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+    
+    nav a:any-link {
+        color: var(--FCOLOR);
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    nav a:hover,
+    nav a:focus {
+        transform: scale(1.2);
+        transition: all 0.3s;
+    }
+}
+main h1{
+  align-content: center;
+}
